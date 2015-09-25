@@ -84,6 +84,8 @@ class Doc2Vec_nWordContext(object):
         for input_word in context:
             # update only weights for context words
             self.WI[self.vocabulary[input_word]] -= (1. / len(context)) * self.learning_rate * EH
+            
+            # update weights of paragraph vector
             self.D[num] -= (1. / len(context)) * self.learning_rate * EH
     
     def train(self):
