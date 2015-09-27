@@ -115,18 +115,23 @@ class Doc2Vec_nWordContext(object):
                             self.backprop(context, target, num)
                     count += 1
                     
-        return self.WI, OrderedDict(sorted(self.vocabulary.items(), key=lambda t: t[1]))
+        return self.WI, self.D, OrderedDict(sorted(self.vocabulary.items(), key=lambda t: t[1]))
 
     def graph_vector_space(self):
         """ 3D Scatter plot of first 3 word features with Plotly"""
         vocab = OrderedDict(sorted(self.vocabulary.items(), key = lambda t: t[1]))
-
+        W_D = np.concatenate((self.WI, self.D), axis=0)
+        
+        text = vocab.keys()
+        for i in range(len(self.sentences)):
+            text.append('S' + str(i+1))
+        
         trace1 = Scatter3d(
-            x = self.WI.T[0],
-            y = self.WI.T[1],
-            z = self.WI.T[2],
+            x = W_D.T[0],
+            y = W_D.T[1],
+            z = W_D.T[2],
             mode ='markers+text',
-            text = vocab.keys(),
+            text = text,
             marker = Marker(
                 size = 8,
                 line = Line(
@@ -156,5 +161,5 @@ if __name__ == '__main__':
                  '<s> the princess loves attention but the princess hates the park </s>']
 
     model = Doc2Vec_nWordContext(sentences, learning_rate = 1.0, context_size = 3)
-    WI, vocab = model.train()
-    print WI, vocab
+    WI, D, vocab = model.train()
+    print WI, D, vocab
