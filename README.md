@@ -4,7 +4,7 @@
 
 **Such continuous word embedding representations have have been proven to be able to carry semantic meanings and are useful in various NLP tasks**
 
-In this notebook, I have attempted to implement three language models described in *Le & Mikolov (2014)*'s paper ** *Distributed Representations of Sentences and Documents* **.
+In this notebook, I have attempted to implement three language models described in *Le & Mikolov (2014)*'s paper **Distributed Representations of Sentences and Documents**.
 
 The implementations don't make use of any NLP libraries and consist of the simplest form of the algorithm with little optimization.
 The aim of this notebook is simply to gain:
