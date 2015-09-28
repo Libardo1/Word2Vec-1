@@ -1,8 +1,8 @@
 # Word2Vec Models for NLP
 
-##The Word2Vec model is a simple word embedding neural network, developed by Mikolov et al. (2013)
+###The Word2Vec model is a simple word embedding neural network, developed by Mikolov et al. (2013)
 
-** * Such continuous word embedding representations have have been proven to be able to carry semantic meanings and are useful in various NLP tasks* **
+**Such continuous word embedding representations have have been proven to be able to carry semantic meanings and are useful in various NLP tasks**
 
 In this notebook, I have attempted to implement three language models described in *Le & Mikolov (2014)*'s paper ** *Distributed Representations of Sentences and Documents* **.
 
