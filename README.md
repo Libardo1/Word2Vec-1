@@ -13,3 +13,6 @@ The aim of this notebook is simply to gain:
 * understanding of the **language models' algorithm**
 * intuition on **word embedding representations**
 * understanding of inner workings of **neural networks**
+
+The main notebook can be viewed here:
+[Word2Vec Notebook](http://nbviewer.ipython.org/github/MarvinBertin/Word2Vec/blob/master/word2vec.ipynb)
