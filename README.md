@@ -16,4 +16,3 @@ The aim of this notebook is simply to gain:
 
 The main notebook can be viewed here:
 [Word2Vec Notebook](http://nbviewer.ipython.org/github/MarvinBertin/Word2Vec/blob/master/word2vec.ipynb)
-
